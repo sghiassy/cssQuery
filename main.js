@@ -1,5 +1,5 @@
 (function() {
-	window. = {}; //register namespace
+	window.c = {}; //register namespace
 	c.cssRules = [];
 
 	for(var i = 0, iLen = document.styleSheets.length; i < iLen; i++) {
