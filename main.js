@@ -20,13 +20,15 @@
 	}
 	
 	function getDomain(url) {
-		var fullDomain = (url.match(/:\/\/(.[^/]+)/)[1]).replace('www.','');
-		var domain = fullDomain.split('.');
+		if(typeof url == "string") {
+			var fullDomain = (url.match(/:\/\/(.[^/]+)/)[1]).replace('www.','');
+			var domain = fullDomain.split('.');
 
-		if(domain.length == 2) {
-			return domain[0];
-		} else {
-			return domain[1];
+			if(domain.length == 2) {
+				return domain[0];
+			} else {
+				return domain[1];
+			}
 		}
 	}
 })();
